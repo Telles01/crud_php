@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    include_once 'autenticacao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +21,14 @@
 
     <h4>Menu</h4>
         
-    <a href="cadastrar-cliente.php" class="btn">Cadastrar Cliente</a>
-    <a href="consultar-cliente.php" class="btn">Consultar Clientes</a>
+    <?php 
+        if($_SESSION["perfil"] == "adm"){
+            include_once 'menus/menu-adm.php';
+        }elseif($_SESSION["perfil"] == "user"){
+            include_once 'menus/menu-user.php';
+        }
+    ?>
+    
 </div>
-
 </body>
 </html>

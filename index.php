@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION["nome"])){
+        header("location:painel.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

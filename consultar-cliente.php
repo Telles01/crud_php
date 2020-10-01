@@ -1,3 +1,7 @@
+<?php 
+    include_once 'autenticacao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +70,9 @@
                             <th>Cpf</th>
                             <th>Sexo</th>
                             <th  class="center-align">Editar</th>
+                            <?php if($_SESSION["perfil"] == "adm"){ ?>
                             <th  class="center-align">Excluir</th>
+                            <?php } ?>
                         </tr>
 
                         <?php               
@@ -81,7 +87,11 @@
                             <td><?php echo $row["cpf"];?></td>
                             <td><?php echo $row["sexo"];?></td>
                             <td class="center-align"><a href="editar-cliente.php?cod=<?php echo $row["cod"]; ?>"><i class="material-icons orange-text">edit</i></a></td>
-                            <td class="center-align"><a href="#" onclick="confirmaExclusao(<?php echo $row['cod']; ?>,'<?php echo $row["nome"];?>')"><i class="material-icons red-text">delete_forever</i></a></td>
+                            
+                            <?php if($_SESSION["perfil"] == "adm"){ ?>
+                                <td class="center-align"><a href="#" onclick="confirmaExclusao(<?php echo $row['cod']; ?>,'<?php echo $row["nome"];?>')"><i class="material-icons red-text">delete_forever</i></a></td>
+                            <?php } ?>
+                            
                         </tr>
                         
                          <?php } //fim do loop ?>

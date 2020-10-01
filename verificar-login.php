@@ -23,6 +23,7 @@
         
         $_SESSION["nome"] = $row["nome"];
         $_SESSION["perfil"] = $row["perfil"];
+        $_SESSION["tempo"] = time(); 
 
         //var_dump($_SESSION);
         header("location:painel.php");
