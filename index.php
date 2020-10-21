@@ -40,7 +40,7 @@
 
         <div class="login card-panel">
 
-            <h3>Área Restrita</h3>
+            <h3>Área Restrita Painel</h3>
             <!-- form login -->
 
             <form action="verificar-login.php" method="post">
