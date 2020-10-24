@@ -38,7 +38,7 @@
 
             <div class="input-field">
                 <input type="text" name="nome" required id="nome" value="<?php echo $row["nome"];?>">
-                <label for="nome">Nome</label>
+                <label for="nome">Name</label>
             </div>
             
             <div class="input-field">
@@ -54,14 +54,14 @@
             <p>
                 <label>
                     <input type="radio" name="sexo" required value="M" <?php if($row["sexo"] == "M"){echo "checked";} ?> >
-                    <span>Masculino</span>
+                    <span>Male</span>
                 </label>
             </p>
 
             <p>
                 <label>
                     <input type="radio" name="sexo" required value="F"  <?php if($row["sexo"] == "F"){echo "checked";} ?> >
-                    <span>Feminino</span>
+                    <span>Feminine</span>
                 </label>
             </p>
 

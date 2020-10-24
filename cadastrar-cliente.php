@@ -16,7 +16,7 @@
     
     <div class="container">
 
-        <h3>Cadastro  Clientes</h3>
+        <h3>Cadastro - Clientes</h3>
         
         <form action="gravar-cliente.php" method="POST">
 
