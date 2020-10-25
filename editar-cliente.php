@@ -65,6 +65,14 @@
                 </label>
             </p>
 
+            <p>
+                <label>
+                    <input type="radio" name="sexo" required value="F"  <?php if($row["sexo"] == "F"){echo "checked";} ?> >
+                    <span>Feminine</span>
+                </label>
+            </p>
+
+
             <input type="submit" value="Atualizar" class="btn">
 
         </form>
